@@ -60,7 +60,7 @@ void plotfun(color clr) {
   beginShape();
   //let myeq = eval(eq)
   for (int x = -width / 2; x < width / 2; x += 1) {
-    float fy = f1(x); //so it gets the values from the array
+    float fy = f1(x); //so it gets the values from the function
     float cy = fy * -1; // cy is corrected for plotting like cartesian not computer
     vertex(x * zoom, cy * zoom);
     //ellipse(x * zoom, cy * zoom, 5, 5); // calculated points plotted on vertex
@@ -84,7 +84,7 @@ void cobweb2(float strt) {
   // get that positionin the array
   for (int i = 0; i < 50; i++) {
     nextx = x;
-    nexty = f1(nextx);  // getting the values by iteration
+    nexty = f1(nextx);  // getting the values by iteration of function
     line(x * zoom, -y * zoom, nextx * zoom, -nexty * zoom);
     x = nexty;
     y = nexty;
